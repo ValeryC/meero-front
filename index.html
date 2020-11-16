@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Meero full html,css,js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="lightbox.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- button remonter and lightbox -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="lightbox.js" async></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div id="remonte" class="navbar-header">
+            <a class="navbar-brand">
+                <img alt="logo" src="Image/logo.svg" class="logo" />
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav navbar-right">
+                <button class="btn btn-default navButton" type="submit">Inscription</button>
+                <button class="btn btn-default navButton navConnexion" type="submit">Connexion</button>
+                <li class="item"></li>
+            </ul>
+        </div>
+    </nav>
+    <img alt="mainImg" src="Image/hero.jpg" class="mainImg" />
+    <section>
+        <div class="containerText">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <h1 class="titre">Foodeero</h1>
+                    <div class="textr">
+                        <p>Food & Photography</p>
+                        <div class="button-gallerie">
+                            <button class="btn btn-default btnsub js-scrollTo" type="submit" href="#gallery">Gallerie</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="gallery">
+
+            <div class="containerfluid">
+                <div class="title-gallerie">
+                    <h1 class='gallery'>
+                        Gallerie
+                    </h1>
+                    <p>Les réalisations de meero</p>
+                </div>
+                <!--  Photos  -->
+
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2">
+                        <img alt="photo1" src="Image/gallery_1.jpg" onclick="openModal();currentSlide(1)" class="img-thumbnail hover-shadow cursor">
+                    </div>
+                    <div class="col-sm-2">
+                        <img alt="photo2" src="Image/gallery_2.jpg" onclick="openModal();currentSlide(2)" class="img-thumbnail hover-shadow cursor">
+                    </div>
+                    <div class="col-sm-2">
+                        <img alt="photo3" src="Image/gallery_3.jpg" onclick="openModal();currentSlide(3)" class="img-thumbnail hover-shadow cursor">
+                    </div>
+                    <div class="col-sm-2">
+                        <img alt="photo4" src="Image/gallery_4.jpg" onclick="openModal();currentSlide(4)" class="img-thumbnail hover-shadow cursor">
+                    </div>
+                    <div class="col-sm-2">
+                        <img alt="photo5" src="Image/gallery_5.jpg" onclick="openModal();currentSlide(5)" class="img-thumbnail hover-shadow cursor">
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+
+                <!-- Modal -->
+
+                <div id="myModal" class="modal">
+                    <span class=" close cursor " onclick="closeModal() ">&times;</span>
+                    <div class="modal-content ">
+
+                        <div class="mySlides ">
+                            <div class="numbertext ">1 / 5</div>
+                            <img src="Image/gallery_1.jpg " onclick="plusSlides(1) " style="width:100% ">
+                        </div>
+
+                        <div class="mySlides ">
+                            <div class="numbertext ">2 / 5</div>
+                            <img src="Image/gallery_2.jpg " onclick="plusSlides(1) " style="width:100% ">
+                        </div>
+
+                        <div class="mySlides ">
+                            <div class="numbertext ">3 / 5</div>
+                            <img src="Image/gallery_3.jpg " onclick="plusSlides(1) " style="width:100% ">
+                        </div>
+
+                        <div class="mySlides ">
+                            <div class="numbertext ">4 / 5</div>
+                            <img src="Image/gallery_4.jpg " onclick="plusSlides(1) " style="width:100% ">
+                        </div>
+
+                        <div class="mySlides ">
+                            <div class="numbertext ">5 / 5</div>
+                            <img src="Image/gallery_5.jpg " onclick="plusSlides(1) " style="width:100% ">
+                        </div>
+
+                        <a class="prev " onclick="plusSlides(-1) ">&#10094;</a>
+                        <a class="next " onclick="plusSlides(1) ">&#10095;</a>
+
+                    </div>
+                </div>
+
+                <!-- Informations  -->
+
+                <div class="container text ">
+                    <div class="row ">
+                        <div class="col-sm-3 margeText ">
+                            <center>
+                                <p class="title ">+8500 professionnels</p>
+                                <p class="textInfo ">partout en France</p>
+                            </center>
+                        </div>
+                        <div class="col-sm-3 margeText leftBorder ">
+                            <center>
+                                <p class="title ">Communiquez</p>
+                                <p class="textInfo ">autrement avec vos clients</p>
+                            </center>
+                        </div>
+                        <div class="col-sm-3 margeText leftBorder ">
+                            <center>
+                                <p class="title ">Disponible</p>
+                                <p class="textInfo ">en 24 heures</p>
+                            </center>
+                        </div>
+                        <div class="col-sm-3 margeText leftBorder ">
+                            <center>
+                                <p class="title ">Images HD</p>
+                                <p class="textInfo ">retouche incluse</p>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+
+<footer>
+    <div class="buttonRemonter ">
+        <!-- <a href="#top "> -->
+        <button class="btn btn-default btnsub2 js-scrollTo " type="submit " href="#remonte ">Remonter</button>
+        <!-- </a> -->
+    </div>
+    <script src="scroll.js " async></script>
+</footer>
+
+
+</body>
+
+</html>
