@@ -12,12 +12,14 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
-function plusSlides(n) {
+function plusSlides(event, n) {
+    event.stopPropagation();
     showSlides(slideIndex += n);
 }
 
 // Thumbnail image controls
-function currentSlide(n) {
+function currentSlide(event, n) {
+    event.stopPropagation();
     showSlides(slideIndex = n);
 }
 
